@@ -1,4 +1,11 @@
-import { Flex, Heading, Highlight } from "@chakra-ui/react";
+import {
+  Card,
+  Center,
+  Divider,
+  Flex,
+  Heading,
+  Highlight,
+} from "@chakra-ui/react";
 import { ReactElement } from "react";
 
 interface iLayout {
@@ -25,9 +32,7 @@ export function Layout({ sidebar, posts }: iLayout) {
       </Flex>
       <Flex height="auto" width="100%" gap={8}>
         <Flex width="30%">{sidebar}</Flex>
-        <Flex width="70%" bg="orange.900">
-          {posts}
-        </Flex>
+        {posts}
       </Flex>
     </Flex>
   );
